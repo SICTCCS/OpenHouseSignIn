@@ -1,7 +1,18 @@
 # OpenHouseSignIn
+This shows simple changes that may need to occur further in time.
 
-### Doc ToDO
-1. Add a new program
-2. Add the documentation for the Google Sheet
-3. Anything that is broken aka the checkboxes
-4. Which files run what - like the HTML files and links to those
+## Easy Changes
+To add or remove a school from the form list go to Main Form/index.html and find this section
+![](Markdown/ss1.PNG)<break>
+
+Then when you go to edit for the value that will be the text returned to the Google Sheet. And for the innerHTML that will be the text that displays on the form.
+
+### To change the (How you heard about SICTC) checkboxes
+You want to navigate to this part of the file
+![](Markdown/ss2.PNG)<break>
+
+When you go to change something the value tag will be what shows up in the Google Sheet. And the text outside of the input tag is what shows up on the form. Make sure to change the id and label for parts also.
+
+
+
+

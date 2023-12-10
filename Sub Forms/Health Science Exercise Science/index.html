@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SICTC Open House Sign Up</title>
+    <meta name="description" content="Please provide your information">
+    <link href="favicon.png" rel="shortcut icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+          <img src="footerLogo.png" alt="Website Logo">
+          <h1>Open House Sign Up</h1>
+      </div>
+  </header>
+    <form name="submit-to-google-sheet">
+      <input type="text" name="id" placeholder="Three Digit ID" required>
+      <input type="hidden" name="program" value="Health Science Exercise Science" id="program">
+      <button type="submit">Send</button>
+     
+    </form>
+    <footer>
+      <a href="https://sictc.evscschools.com/"><img src="headerLogo.svg" alt="Footer Logo"></a> 
+      <p>&copy; 2023 Owen Cape</p>
+      <p>Maintained & Built by SICTC Computer Science Software Development</p>
+  </footer>
+  </body>
+</html>
+
+
+
+
+
+<script src="script.js"></script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxDDFN7KkIYHdzTk6Vi3ZPvri_3qh2_Biexf5ygwpiXPQjjuH1NXVBxaZ5E8IW2tIYETg/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+    e.currentTarget.reset()
+  })
+</script>
