@@ -17,11 +17,12 @@
       </div>
   </header>
     <form name="submit-to-google-sheet">
-      <input name="email" type="email" placeholder="Email" required>
-      <input name="firstName" type="text" placeholder="First Name">
+      <input name="personalEmail" type="email" placeholder="Personal Email" required>
+      <input name="emailAddress" type="email" id="emailInput" placeholder="School Email" required>
+      <input name="firstName" type="text" placeholder="First Name" required>
       <input name="preferedName" type="text" placeholder="Prefered Name or Nickname">
-      <input name="lastName" type="text" placeholder="Last Name">
-      <select name="school"placeholder="School">
+      <input name="lastName" type="text" placeholder="Last Name" required>
+      <select name="school"placeholder="School" id="schoolSelect" required>
         <option disabled selected value>Select a School</option>
         <option value="AIS">AIS</option>
         <option value="Boonville">Boonville High School</option>
@@ -91,14 +92,14 @@
     <input type="text" name="id" placeholder="Three Digit ID" required>
   </div>
     <input type="hidden" id="hiddenInput" name="reference">
+    <input type="hidden" name="schoolEmail" id="emailPut">
 
     <button type="submit">Send</button>
      
     </form>
     <footer>
       <a href="https://sictc.evscschools.com/"><img src="headerLogo.svg" alt="Footer Logo"></a> 
-      <p>&copy; 2023 Owen Cape</p>
-      <p>Maintained & Built by SICTC Computer Science Software Development</p></div>
+      <p>Maintained & Built by SICTC<br>Computer Science Software Development</p></div>
   </footer>
   </body>
 </html>
@@ -116,6 +117,39 @@
   form.addEventListener('submit', function(event) {
    
     event.preventDefault()
+
+    
+
+    var dropdown = document.getElementById("schoolSelect");
+    var selectedSchool = dropdown.value;
+
+    //EVSC
+    if (selectedSchool === "Bosse" || selectedSchool === "Central" || selectedSchool === "Harrison" || selectedSchool === "AIS" || selectedSchool === "Harwood" || selectedSchool === "EVSC Virtual Academy" || selectedSchool === "North" || selectedSchool === "Reitz" || selectedSchool === "NTI"){
+      var emailInput = document.getElementById("emailInput");
+      var emailValue = emailInput.value;
+      var indexOfAt = emailValue.indexOf('@');
+      var substring = emailValue.substring(0, indexOfAt + 1);
+      var finalEmail = substring + "stu.evsck12.com"
+      document.getElementById("emailPut").value = finalEmail
+    }
+    else if (selectedSchool === "Castle" || selectedSchool === "Tecumseh" || selectedSchool === "Boonville"){
+      var emailInput = document.getElementById("emailInput");
+      var emailValue = emailInput.value;
+      var indexOfAt = emailValue.indexOf('@');
+      var substring = emailValue.substring(0, indexOfAt + 1);
+      var finalEmail = substring + "warrick.k12.in.us"
+      document.getElementById("emailPut").value = finalEmail
+    }
+    else{
+      var emailInput = document.getElementById("emailInput");
+      var emailValue = emailInput.value;
+      document.getElementById("emailPut").value = emailValue
+    }
+
+    
+
+
+
 
     // Get all checkboxes with the name "interests"
     var checkboxes = document.querySelectorAll('input[name="where"]');
