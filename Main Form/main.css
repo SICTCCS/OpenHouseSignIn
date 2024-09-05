@@ -115,6 +115,10 @@ button {
   border-radius: 4px;
 }
 
+#otherReference {
+  display: none;
+}
+
 /* Style form submit button */
 button {
   background-color: #707f43;
