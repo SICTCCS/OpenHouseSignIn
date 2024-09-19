@@ -115,9 +115,8 @@ button {
   border-radius: 4px;
 }
 
-#otherReference {
-  display: none;
-}
+
+
 
 /* Style form submit button */
 button {
@@ -501,4 +500,12 @@ footer img {
   .item.checked .check-icon{
       transform: scale(1);
   }
+  }
+  
+  #otherReference {
+  display: none;
+  }
+
+  button{
+    margin-top: 3%;
   }

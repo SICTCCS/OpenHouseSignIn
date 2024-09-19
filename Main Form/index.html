@@ -16,7 +16,7 @@
           <h1>Open House Sign Up</h1>
       </div>
   </header>
-    <form name="submit-to-google-sheet">
+  <form name="submit-to-google-sheet" method="POST" action="https://script.google.com/macros/s/AKfycbz1oxvh3NSnh6P9dglKoMt56q8jUQbgYamPvvWiIl8h5b93tuJXI7Vw1sd8GxkhYhD4/exec">
       <input name="personalEmail" type="email" placeholder="Personal Email" required>
       <input name="emailAddress" type="email" id="emailInput" placeholder="School Email" required>
       <input name="firstName" type="text" placeholder="First Name" required>
@@ -55,31 +55,31 @@
       <fieldset name="reference">
         <legend name="reference">How did you find out about SICTC?</legend>
 
-        <input type="checkbox" id="counselor" name="where" value="counselor"> High School Counselor
+        <input type="checkbox" id="High School Counselor" name="where" value="counselor"> High School Counselor
         <label for="counselor"></label>
 
-        <input type="checkbox" id="posters" name="where" value="posters"> Informational Posters
+        <input type="checkbox" id="Informational Posters" name="where" value="posters"> Informational Posters
         <label for="posters"></label> 
 
-        <input type="checkbox" id="facebook" name="where" value="facebook"> Facebook
+        <input type="checkbox" id="Facebook" name="where" value="facebook"> Facebook
         <label for="facebook"></label>
 
-        <input type="checkbox" id="books" name="where" value="instagram"> Instagram
+        <input type="checkbox" id="Instagram" name="where" value="instagram"> Instagram
         <label for="instagram" ></label>
 
-        <input type="checkbox" id="website" name="where" value="website"> SICTC Website
+        <input type="checkbox" id="SICTC Website" name="where" value="website"> SICTC Website
         <label for="website" ></label>
 
-        <input type="checkbox" id="relative" name="where" value="relative"> Friend or Family Member
+        <input type="checkbox" id="Friend or Family Member" name="where" value="relative"> Friend or Family Member
         <label for="relative" ></label>
 
-        <input type="checkbox" id="alumni" name="where" value="alumni"> SICTC Alumni
+        <input type="checkbox" id="SICTC Alumni" name="where" value="alumni"> SICTC Alumni
         <label for="alumni" ></label>
 
-        <input type="checkbox" id="student" name="where" value="student"> Current SICTC Student
+        <input type="checkbox" id="Current SICTC Student" name="where" value="student"> Current SICTC Student
         <label for="student"></label>
 
-        <input type="checkbox" id="meeting" name="where" value="meeting"> SICTC Meeting at High School
+        <input type="checkbox" id="SICTC Meeting at High School" name="where" value="meeting"> SICTC Meeting at High School
         <label for="meeting" ></label>
 
         <div>
@@ -87,9 +87,7 @@
           <input type="text" id="otherReference" name="otherReference" placeholder="">
         </div>
     </fieldset>
-    <div id="space">
-    <!--<input type="text" name="id" placeholder="Three Digit ID" required>-->
-  </div>
+
     <input type="hidden" id="hiddenInput" name="reference">
     <input type="hidden" name="schoolEmail" id="emailPut">
 
@@ -108,7 +106,7 @@
 
 
 <script src="script.js"></script> 
-<script>
+<!-- <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxDDFN7KkIYHdzTk6Vi3ZPvri_3qh2_Biexf5ygwpiXPQjjuH1NXVBxaZ5E8IW2tIYETg/exec'
   const form = document.forms['submit-to-google-sheet']
   // Concatenate the selected interests into a string
@@ -179,4 +177,4 @@
   })
   //refresh screen
   
-</script>
+</script> -->
