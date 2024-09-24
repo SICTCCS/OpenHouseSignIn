@@ -7,7 +7,7 @@ checkbox.addEventListener("change", () => {
 
 // Code from https://codepen.io/levinunnink-the-bashful/pen/YzxPyoG?editors=0010
 
-// edit the custom notification
+//* edit the custom notification *//
 
 window.addEventListener("load", function() {
     const form = document.getElementById('submit-to-google-sheet');
