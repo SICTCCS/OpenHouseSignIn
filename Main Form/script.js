@@ -14,5 +14,14 @@ form.addEventListener("submit", function(e) {
   e.preventDefault();
   const data = new FormData(form);
   const action = e.target.action;
-    alert("Successfully Submitted!");
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Successfully Submitted!");
+    })
+    .catch((error) => {
+      alert("Submission Failed, please try again.")
+    })
 });
