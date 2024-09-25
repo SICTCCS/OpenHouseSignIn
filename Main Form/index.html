@@ -16,7 +16,7 @@
           <h1>Open House Sign Up</h1>
       </div>
   </header>
-  <form id="submit-to-google-sheet" name="submit-to-google-sheet" method="POST" action="https://script.google.com/macros/s/AKfycbwlkHQv_tFtYcH_7U7h6pj9sapqwQwEyw8SE1ez1DrE8pvzTcANFzUjv_ZTAApclX_6/exec">
+  <form id="submit-to-google-sheet" name="submit-to-google-sheet" method="POST" action="https://script.google.com/macros/s/AKfycbyU7mQmsHOV2vmas4kAHhQOcWk-aXAEELhVERDAvpXWea3WDgz_9txlxjOVDJVTKtgq/exec">
       <input name="personalEmail" type="email" placeholder="Personal Email" required>
       <input name="emailAddress" type="email" id="emailInput" placeholder="School Email" required>
       <input name="firstName" type="text" placeholder="First Name" required>
@@ -102,75 +102,3 @@
 </html>
 
 <script src="script.js"></script> 
-<!-- <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxDDFN7KkIYHdzTk6Vi3ZPvri_3qh2_Biexf5ygwpiXPQjjuH1NXVBxaZ5E8IW2tIYETg/exec'
-  const form = document.forms['submit-to-google-sheet']
-  // Concatenate the selected interests into a string
-  // Get the selected interests
-  form.addEventListener('submit', function(event) {
-   
-    event.preventDefault()
-
-    
-
-    var dropdown = document.getElementById("schoolSelect");
-    var selectedSchool = dropdown.value;
-
-    //EVSC
-    if (selectedSchool === "Bosse" || selectedSchool === "Central" || selectedSchool === "Harrison" || selectedSchool === "AIS" || selectedSchool === "Harwood" || selectedSchool === "EVSC Virtual Academy" || selectedSchool === "North" || selectedSchool === "Reitz" || selectedSchool === "NTI"){
-      var emailInput = document.getElementById("emailInput");
-      var emailValue = emailInput.value;
-      var indexOfAt = emailValue.indexOf('@');
-      var substring = emailValue.substring(0, indexOfAt + 1);
-      var finalEmail = substring + "stu.evsck12.com"
-      document.getElementById("emailPut").value = finalEmail
-    }
-    else if (selectedSchool === "Castle" || selectedSchool === "Tecumseh" || selectedSchool === "Boonville"){
-      var emailInput = document.getElementById("emailInput");
-      var emailValue = emailInput.value;
-      var indexOfAt = emailValue.indexOf('@');
-      var substring = emailValue.substring(0, indexOfAt + 1);
-      var finalEmail = substring + "warrick.k12.in.us"
-      document.getElementById("emailPut").value = finalEmail
-    }
-    else{
-      var emailInput = document.getElementById("emailInput");
-      var emailValue = emailInput.value;
-      document.getElementById("emailPut").value = emailValue
-    }
-
-    
-
-
-
-
-    // Get all checkboxes with the name "interests"
-    var checkboxes = document.querySelectorAll('input[name="where"]');
-    
-    // Filter checked checkboxes and get their values
-    var selectedInterests = [];
-    checkboxes.forEach(function(checkbox) {
-        if (checkbox.checked) {
-            selectedInterests.push(checkbox.value);
-        }
-    });
-
-    // Concatenate the selected interests into a string
-    let interestsString = selectedInterests.join('-');
-
-    
-    console.log(interestsString)
-    // Display the concatenated string
-    document.getElementById("hiddenInput").value = interestsString;
-    
-
-    // alert('Selected Interests: ' + interestsString);
-    // event.currentTarget.submit()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-    event.currentTarget.reset();
-  })
-  //refresh screen
-  
-</script> -->
