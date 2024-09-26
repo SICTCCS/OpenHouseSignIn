@@ -9,6 +9,8 @@ checkbox.addEventListener("change", () => {
 
 const form = document.getElementById('submit-to-google-sheet');
 form.addEventListener("submit", function(e) {
+  let regBTN = document.getElementById('RegisterBTN');
+  regBTN.innerHTML="Upload In Progress"
   e.preventDefault();
   const data = new FormData(form);
   const action = e.target.action;
@@ -17,9 +19,15 @@ form.addEventListener("submit", function(e) {
       body: data,
     })
     .then(() => {
-      alert("Successfully Submitted!");
+      // alert("Successfully Submitted!");
+      // location.reload();
+      var answer = confirm ("Successfully Registered!!!");
+      regBTN.innerHTML="Register"
+      if (answer) location.reload();
     })
     .catch((error) => {
-      alert("Submission Failed, please try again.")
+      alert("Submission Failed, please try again.\n"+error);
+      regBTN.innerHTML="Register"
     })
+    // e.currentTarget.reset()
 });
