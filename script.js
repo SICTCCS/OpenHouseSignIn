@@ -33,7 +33,9 @@ form.addEventListener("submit", function(e) {
 
       let school = document.getElementById("schoolSelect").value;
 
-      print_label(0, name, school);
+      console.log(school);
+      console.log(name);
+      // print_label(0, name, school);
       if (answer) location.reload();
     })
     .catch((error) => {
