@@ -36,7 +36,8 @@ form.addEventListener("submit", function(e) {
       console.log(school);
       console.log(name);
       // print_label(0, name, school);
-      if (answer) location.reload();
+      
+      // if (answer) location.reload();
     })
     .catch((error) => {
       alert("Submission Failed, please try again.\n"+error);
