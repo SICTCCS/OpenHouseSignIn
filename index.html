@@ -90,7 +90,7 @@
 
       <input type="hidden" id="hiddenInput" name="reference">
       <input type="hidden" name="schoolEmail" id="emailPut">
-      <input type="hidden" name="id" value="=ROW(">
+      <!-- <input type="hidden" name="id" value="=ROW("> -->
 
       <button type="submit" id="RegisterBTN">Register</button>
      
@@ -100,6 +100,17 @@
     <p>Maintained & Built by SICTC<br>Computer Science Software Development</p></div>
 </footer>
 </body>
-</html>
 
 <script src="script.js"></script> 
+<script src="https://qajavascriptsdktests.azurewebsites.net/JavaScript/dymo.connect.framework.js"
+  type="text/javascript"></script>
+<script src="printer.js" type="text/javascript"></script>
+<script>
+  // Use our script
+  RegisterBTN.onclick = function () {
+    print_label(0, "Jenna Ortega", "Reitz");
+  }
+</script>
+
+</html>
+
