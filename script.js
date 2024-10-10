@@ -33,11 +33,13 @@ form.addEventListener("submit", function(e) {
 
       let school = document.getElementById("schoolSelect").value;
 
+      
+
       console.log(school);
       console.log(name);
       print_label(0, name, school);
 
-      // if (answer) location.reload();
+      if (answer) location.reload();
     })
     .catch((error) => {
       alert("Submission Failed, please try again.\n"+error);
