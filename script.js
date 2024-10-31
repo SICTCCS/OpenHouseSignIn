@@ -7,11 +7,14 @@ checkbox.addEventListener("change", () => {
 let prefname = document.getElementById("PrefName");
 let firstname = document.getElementById("FirstName")
 let lastname = document.getElementById("LastName");
+let userID = document.getElementById("userID");
 // Code from https://codepen.io/levinunnink-the-bashful/pen/YzxPyoG?editors=0010
 
 const form = document.getElementById('submit-to-google-sheet');
 
-document.getElementById("userID").value = "777";
+let code = 0o1;
+
+userID.value = "777";
 
 form.addEventListener("submit", function(e) {
   const regBTN = document.getElementById('RegisterBTN');
