@@ -14,7 +14,7 @@ const form = document.getElementById('submit-to-google-sheet');
 
 let code = 0o1;
 
-userID.value = "777";
+userID.value = "A99";
 
 form.addEventListener("submit", function(e) {
   const regBTN = document.getElementById('RegisterBTN');
