@@ -10,15 +10,21 @@ let lastname = document.getElementById("LastName");
 // Code from https://codepen.io/levinunnink-the-bashful/pen/YzxPyoG?editors=0010
 
 const form = document.getElementById('submit-to-google-sheet');
+
+document.getElementById("userID").value = "777";
+
 form.addEventListener("submit", function(e) {
-  let regBTN = document.getElementById('RegisterBTN');
+  const regBTN = document.getElementById('RegisterBTN');
   regBTN.innerHTML="Upload In Progress"
   e.preventDefault();
   const data = new FormData(form);
   const action = e.target.action;
+  regBTN.disabled = true;
+
     fetch(action, {
       method: 'POST',
       body: data,
+      
     })
     .then(() => {
       // alert("Successfully Submitted!");
@@ -26,24 +32,27 @@ form.addEventListener("submit", function(e) {
       // var answer = confirm ("Successfully Registered!!!");
       regBTN.innerHTML="Register"
 
-      let name = firstname.value;
-      if (prefname.value != "")
-        name = prefname.value;
-      name += " " + lastname.value;
-
-      let school = document.getElementById("schoolSelect").value;
-
-      
-
-      console.log(school);
-      console.log(name);
-      print_label(0, name, school);
-
-      location.reload();
+      form.reset();
+      regBTN.disabled=false;
     })
     .catch((error) => {
       alert("Submission Failed, please try again.\n"+error);
       regBTN.innerHTML="Register"
+
+      regBTN.disabled=false;
     })
+
+    let name = firstname.value;
+      if (prefname.value != "")
+        name = prefname.value;
+      name += " " + lastname.value;
+
+    let school = document.getElementById("schoolSelect").value;
+
+    console.log(school);
+    console.log(name);
+    print_label(0, name, school);
+
+      
     // e.currentTarget.reset()
 });
