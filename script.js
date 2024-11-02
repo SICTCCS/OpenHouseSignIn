@@ -11,6 +11,7 @@ let prefname = document.getElementById("PrefName");
 let firstname = document.getElementById("FirstName")
 let lastname = document.getElementById("LastName");
 let userID = document.getElementById("userID");
+userID.value = "'" + kioskID + userIDCounter.toString(16).padStart(2, "0");
 // Code from https://codepen.io/levinunnink-the-bashful/pen/YzxPyoG?editors=0010
 
 const form = document.getElementById('submit-to-google-sheet');
@@ -55,7 +56,7 @@ form.addEventListener("submit", function(e) {
 		userIDCounter = 0;
 		kioskID = (parseInt(kioskID, 16) + 3).toString(16);
 	}
-	userID.value = kioskID + userIDCounter.toString(16).padStart(2, "0");
+	userID.value = "'" + kioskID + userIDCounter.toString(16).padStart(2, "0");
 	console.log(userID.value)
 
 });
