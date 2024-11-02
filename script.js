@@ -11,7 +11,7 @@ let lastname = document.getElementById("LastName");
 
 const form = document.getElementById('submit-to-google-sheet');
 form.addEventListener("submit", function(e) {
-  let regBTN = document.getElementById('RegisterBTN');
+  const regBTN = document.getElementById('RegisterBTN');
   regBTN.innerHTML="Upload In Progress"
   e.preventDefault();
   const data = new FormData(form);
@@ -19,6 +19,7 @@ form.addEventListener("submit", function(e) {
     fetch(action, {
       method: 'POST',
       body: data,
+      regBTN.dis
     })
     .then(() => {
       // alert("Successfully Submitted!");
@@ -26,7 +27,16 @@ form.addEventListener("submit", function(e) {
       // var answer = confirm ("Successfully Registered!!!");
       regBTN.innerHTML="Register"
 
-      let name = firstname.value;
+      
+
+      location.reload();
+    })
+    .catch((error) => {
+      alert("Submission Failed, please try again.\n"+error);
+      regBTN.innerHTML="Register"
+    })
+
+    let name = firstname.value;
       if (prefname.value != "")
         name = prefname.value;
       name += " " + lastname.value;
@@ -39,11 +49,5 @@ form.addEventListener("submit", function(e) {
       console.log(name);
       print_label(0, name, school);
 
-      location.reload();
-    })
-    .catch((error) => {
-      alert("Submission Failed, please try again.\n"+error);
-      regBTN.innerHTML="Register"
-    })
     // e.currentTarget.reset()
 });
