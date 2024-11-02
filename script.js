@@ -1,3 +1,6 @@
+let kioskID = prompt("Enter the Kiosk ID (0-F)", "0")
+let userIDCounter = 0;
+
 let checkbox = document.getElementById("other");
 checkbox.addEventListener("change", () => {
     let textBox = document.getElementById("otherReference")
@@ -11,10 +14,6 @@ let userID = document.getElementById("userID");
 // Code from https://codepen.io/levinunnink-the-bashful/pen/YzxPyoG?editors=0010
 
 const form = document.getElementById('submit-to-google-sheet');
-
-let code = 0o1;
-
-userID.value = "A99";
 
 form.addEventListener("submit", function(e) {
   const regBTN = document.getElementById('RegisterBTN');
@@ -30,18 +29,13 @@ form.addEventListener("submit", function(e) {
       
     })
     .then(() => {
-      // alert("Successfully Submitted!");
-      // location.reload();
-      // var answer = confirm ("Successfully Registered!!!");
       regBTN.innerHTML="Register"
-
       form.reset();
       regBTN.disabled=false;
     })
     .catch((error) => {
       alert("Submission Failed, please try again.\n"+error);
       regBTN.innerHTML="Register"
-
       regBTN.disabled=false;
     })
 
@@ -52,10 +46,13 @@ form.addEventListener("submit", function(e) {
 
     let school = document.getElementById("schoolSelect").value;
 
-    console.log(school);
-    console.log(name);
     print_label(0, name, school);
 
-      
-    // e.currentTarget.reset()
+	userIDCounter++;
+	if (userIDCounter > 255) {
+		userIDCounter = 0;
+		kioskID = (parseInt(kioskID, 16) + 3).toString(16);
+	}
+	userID.value = kioskID + userIDCounter.toString(16).padStart(2, "0")
+
 });
