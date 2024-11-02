@@ -2,9 +2,9 @@ let kioskID = prompt("Enter the Kiosk ID (0-F)", "0")
 let userIDCounter = 0;
 
 let checkbox = document.getElementById("other");
+let otherReference = document.getElementById("otherReference")
 checkbox.addEventListener("change", () => {
-    let textBox = document.getElementById("otherReference")
-    textBox.style = checkbox.checked ? "display:block" : "display:none";
+    otherReference.style = checkbox.checked ? "display:block" : "display:none";
 })
 
 let prefname = document.getElementById("PrefName");
@@ -32,11 +32,13 @@ form.addEventListener("submit", function(e) {
       regBTN.innerHTML="Register"
       form.reset();
       regBTN.disabled=false;
+	    otherReference.style = "display:none";
     })
     .catch((error) => {
       alert("Submission Failed, please try again.\n"+error);
       regBTN.innerHTML="Register"
       regBTN.disabled=false;
+	    otherReference.style = "display:none";
     })
 
     let name = firstname.value;
@@ -53,6 +55,7 @@ form.addEventListener("submit", function(e) {
 		userIDCounter = 0;
 		kioskID = (parseInt(kioskID, 16) + 3).toString(16);
 	}
-	userID.value = kioskID + userIDCounter.toString(16).padStart(2, "0")
+	userID.value = kioskID + userIDCounter.toString(16).padStart(2, "0");
+	console.log(userID.value)
 
 });
