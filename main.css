@@ -114,3 +114,9 @@ footer img {
 #otherReference {
 	display: none;
 }
+.subformTitle{
+	color: #335879;
+	font-size: 24px;
+	margin-bottom: 10px;
+	text-align: center;
+}
