@@ -49,15 +49,18 @@ form.addEventListener("submit", function(e) {
 
     let school = document.getElementById("schoolSelect").value;
 
-    print_label(0, name, school);
-
 	userIDCounter++;
 	if (userIDCounter > 255) {
 		userIDCounter = 0;
 		kioskID = (parseInt(kioskID, 16) + 3).toString(16);
 	}
-	userID.value = "'" + kioskID + userIDCounter.toString(16).padStart(2, "0");
-	console.log(userID.value)
+
+  let id = kioskID + userIDCounter.toString(16).padStart(2, "0");
+
+	userID.value = "'" + id;
+	console.log(userID.value);
+
+  print_label(id, name, school);
 
 });
 document.getElementById('RegisterBTN').disabled=false;
