@@ -60,3 +60,4 @@ form.addEventListener("submit", function(e) {
 	console.log(userID.value)
 
 });
+document.getElementById('RegisterBTN')=false;
