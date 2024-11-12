@@ -17,10 +17,9 @@
       </div>
   </header>
   <form id="submit-to-google-sheet" name="submit-to-google-sheet" autocomplete="off" method="POST" action="https://script.google.com/macros/s/AKfycbyU7mQmsHOV2vmas4kAHhQOcWk-aXAEELhVERDAvpXWea3WDgz_9txlxjOVDJVTKtgq/exec">
-      <input name="personalEmail" type="email" placeholder="Personal Email" required>
-      <input name="emailAddress" type="email" id="emailInput" placeholder="School Email" required>
+      <input name="emailAddress" type="email" id="emailInput" placeholder="Email" required>
       <input name="firstName" type="text" placeholder="First Name" id="FirstName" required>
-      <input name="preferedName" type="text" placeholder="Prefered Name or Nickname" id="PrefName">
+      <input name="preferedName" type="text" placeholder="Prefered Name or Nickname (Optional)" id="PrefName">
       <input name="lastName" type="text" placeholder="Last Name" id="LastName" required>
       <select name="school"placeholder="School" id="schoolSelect" required>
         <option disabled selected value>Select a School</option>
@@ -53,7 +52,7 @@
         <option value="Other">Other</option>
       </select>
       <fieldset name="reference">
-        <legend name="reference">How did you find out about SICTC?</legend>
+        <legend name="reference">How did you find out about SICTC? (All that Apply)</legend>
 
         <input type="checkbox" id="High School Counselor" name="where" value="counselor"> High School Counselor
         <label for="counselor"></label>
