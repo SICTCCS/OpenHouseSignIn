@@ -43,9 +43,7 @@ form.addEventListener("submit", function(e) {
     })
 
     let name = firstname.value;
-      if (prefname.value != "")
-        name = prefname.value;
-      name += " " + lastname.value;
+    name += " " + lastname.value;
 
     let school = document.getElementById("schoolSelect").value;
 
