@@ -28,6 +28,16 @@ fieldset {
 	margin-left: 8px;
 	padding-right: 18px;
 }
+div[name="courses"]{
+	padding: 12px;
+	margin-left: 8px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 25px 45% 25px 45%;
+}
+div[name="programs"]{
+	border: none;
+}	
 legend {
 	font-weight: bold;
 }
