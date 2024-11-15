@@ -121,7 +121,7 @@ to apply!</String>\
 				<Element>\
 					<String>' + name + '\n' + school + '\n' + id.toString().padStart(3, '0') + '</String>\
 					<Attributes>\
-						<Font Family="Arial" Size="20" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
+						<Font Family="Ubuntu Mono" Size="22" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
 						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />\
 					</Attributes>\
 				</Element>\
