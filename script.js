@@ -1,5 +1,5 @@
 let kioskID = prompt("Enter the Kiosk ID (0-F)", "0")
-let userIDCounter = 0;
+let userIDCounter = prompt("Enter Counter Start (00-FF)", "0");
 
 let checkbox = document.getElementById("other");
 let otherReference = document.getElementById("otherReference")
@@ -52,10 +52,10 @@ form.addEventListener("submit", function(e) {
 	userIDCounter++;
 	if (userIDCounter > 255) {
 		userIDCounter = 0;
-		kioskID = (parseInt(kioskID, 16) + 3).toString(16);
+		kioskID = (parseInt(kioskID, 16) + 3).toString(16).toUpperCase();
 	}
 
-  let id = kioskID + userIDCounter.toString(16).padStart(2, "0");
+  let id = kioskID + userIDCounter.toString(16).padStart(2, "0").toUpperCase();
 
 	userID.value = "'" + id;
 	console.log(userID.value);

@@ -102,3 +102,10 @@ footer img {
   max-height: 65px;
   margin-bottom: 10px;
 }
+#statusMessage {
+  font-family: Poppins;
+  font-size: 24px;
+  display: none;
+  color: #45a049;
+  text-align: center;
+}

@@ -21,6 +21,7 @@
       <input type="text" name="id" placeholder="Three Digit ID" required>
       <input type="hidden" name="program" value="Public Safety Criminal Justice" id="program">
       <button type="submit">Send</button>
+      <p id="statusMessage"></p>
      
     </form>
     <footer>
@@ -30,20 +31,4 @@
   </body>
 </html>
 
-
-
-
-
-<script src="script.js"></script>
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycby6Qktc7J3uxIPCdzJ5nTdcdITaFF2XVpcc3Gtaq1ZEb6BiZHNnvLtY6aFeHRctyO1I/exec';
-  const form = document.forms['submit-to-google-sheet']
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-    e.currentTarget.reset()
-  })
-</script>
+<script src="/OpenHouseSignIn/sub.js"></script>
