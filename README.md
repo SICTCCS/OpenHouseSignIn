@@ -40,3 +40,6 @@ https://github.com/dymosoftware/DCD-SDK-Sample
 
 This is a link to a github repo that contains examples. Scroll down to the Javascript examples for the relevant content and download the examples. These will help you to know if you have the right content installed and by inspecting, you can check your content.
 
+## Using the Functions
+
+
