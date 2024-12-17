@@ -1,7 +1,8 @@
 # OpenHouseSignIn
-This shows simple changes that may need to occur further in time.
 
 ## Easy Changes
+This shows simple changes that may need to occur further in time.
+
 To add or remove a school from the form list go to Main Form/index.html and find this section
 ![](Markdown/schools.png)<break>
 
