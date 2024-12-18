@@ -47,5 +47,5 @@ This is a link to a github repo that contains examples. Scroll down to the Javas
 These are the functions used in the printer.js file that are then called in the script.js. The first function uses the dymoframework to load in the printers into an array. 
 Then the print_label function calls on the users name, id, and school to then pull the printer and actually print the label.\
 
-Inside the printer.js is the xml for the label. If you change the label with the previous link, then you need to copy the XML and replace the large paragraph inside printer.js
+Inside the printer.js is the xml for the label. If you change the label with the previous labelmaker software, then you will need to copy the XML and replace the large paragraph inside printer.js.
 
