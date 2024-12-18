@@ -48,4 +48,4 @@ These are the functions used in the printer.js file that are then called in the 
 Then the print_label function calls on the users name, id, and school to then pull the printer and actually print the label.\
 
 Inside the printer.js is the xml for the label. If you want to change the label, use the previous labelmaker software and then copy the XML and replace the large paragraph inside printer.js.
-![](Markdown/reference.png)<break>
+![](Markdown/XML.png)<break>
