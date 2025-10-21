@@ -13,6 +13,8 @@ You want to navigate to this part of the file
 ![](Markdown/reference.png)<break>
 
 When you change something, the value tag will be what appears in the Google sheet or what is put inside an input is what will appear. The ID needs to be the header of the row for the sheets to autofill the values/inputs. 
+## NO LONGER USING PRINTERS 
+
 
 ## Setting up the Printers
 The software needed to run the automatic printing.
