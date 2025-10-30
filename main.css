@@ -79,6 +79,7 @@ label {
 }
 input[type="email"],
 select,
+input[type="tel"],
 input[type="text"],
 button {
 	width: 100%;
