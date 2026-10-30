@@ -30,10 +30,13 @@ form.addEventListener("submit", function(e) {
       
     })
     .then(() => {
-      regBTN.innerHTML="Register"
-      form.reset();
-      regBTN.disabled=false;
-	    otherReference.style = "display:none";
+      regBTN.innerHTML="Upload Complete!"
+      setTimeout(function() {
+        form.reset();
+	      otherReference.style = "display:none";
+        regBTN.disabled=false;
+        regBTN.innerHTML="Register"
+      }, 500);
     })
     .catch((error) => {
       alert("Submission Failed, please try again.\n"+error);
@@ -47,6 +50,7 @@ form.addEventListener("submit", function(e) {
 
     let school = document.getElementById("schoolSelect").value;
 
+    
 	// userIDCounter++;
 	// if (userIDCounter > 255) {
 		// userIDCounter = 0;
