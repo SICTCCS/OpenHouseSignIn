@@ -16,11 +16,11 @@
           <h1>Open House Sign Up</h1>
       </div>
   </header>
-    <form name="submit-to-google-sheet" autocomplete="off">
+    <form id="submit-to-google-sheet" name="submit-to-google-sheet" autocomplete="off" method="POST" action="https://script.google.com/macros/s/AKfycbyRwUdArPA4sfAadwxFrfNXoo9VVObT-PYj_R78Vdy4CMtb8qteDV2QAx6ozqIntUMn/exec">
       <h2>Building Construction Technology</h2>
       <input type="tel" pattern="\d{10}"  inputmode="numeric"  maxlength="10" name="id" oninput="this.value = this.value.replace(/\D/g, '').slice(0, 10)" placeholder="Phone Number(only numbers)" id="id" required>
       <h2 style="color:green;display: none;text-align: center;" id="Success" >Successfully Submitted!</h2>
-      <input type="hidden" name="program" value="Building Construction Technology" id="program">
+      <input type="hidden" name="program" value="bct" id="program">
       <button type="submit">Send</button>
      
     </form>
