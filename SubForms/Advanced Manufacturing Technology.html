@@ -16,7 +16,7 @@
           <h1>Open House Sign Up</h1>
       </div>
   </header>
-    <form name="submit-to-google-sheet" autocomplete="off">
+    <form id="submit-to-google-sheet" name="amt" autocomplete="off" method="POST" action="https://script.google.com/macros/s/AKfycbxZzIARHnAUvdMH8phh038DQG6IlFS0FI2VMFoTa__84GYgtYZDd99ZgDTlHUlVlp6b/exec">
       <h2>Advanced Manufacturing Technology</h2>
       <input type="tel" pattern="\d{10}"  inputmode="numeric"  maxlength="10" name="id" oninput="this.value = this.value.replace(/\D/g, '').slice(0, 10)" placeholder="Phone Number(only numbers)" id="id" required>
       <h2 style="color:green;display: none;text-align: center;" id="Success" >Successfully Submitted!</h2>

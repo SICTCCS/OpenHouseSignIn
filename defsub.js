@@ -1,5 +1,21 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxoltgMQb4eiyi5QHblBzN9sj20j2xLZ6qsHUAgmHsQgW1AxGPza_oD-ADPrSxalIhu/exec';
-  const form = document.forms['submit-to-google-sheet']
+
+const form = document.getElementById("submit-to-google-sheet");
+const formName = form.getAttribute("name");
+
+
+// function submitForm(formElement, formType) {
+//   var formData = {
+//     formType: formType,
+//     id:formElement.id ? formElement.id.value : ''
+//   }
+// }
+
+
+
+
+
+
 
   form.addEventListener('submit', e => {
     const Info = document.getElementById('Success')
