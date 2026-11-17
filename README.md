@@ -13,6 +13,9 @@ You want to navigate to this part of the file
 ![](Markdown/reference.png)<break>
 
 When you change something, the value tag will be what appears in the Google sheet or what is put inside an input is what will appear. The ID needs to be the header of the row for the sheets to autofill the values/inputs. 
+
+### If the Apps Script (ask Bander) deployment is out of date
+Simply create a new deployment, save it, and then run it to make sure everything went through as it should.
 ## NO LONGER USING PRINTERS 
 
 
