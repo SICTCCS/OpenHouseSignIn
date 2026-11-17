@@ -20,7 +20,7 @@
       <h2>Automotive Service Technology</h2>
       <input type="tel" pattern="\d{10}"  inputmode="numeric"  maxlength="10" name="id" oninput="this.value = this.value.replace(/\D/g, '').slice(0, 10)" placeholder="Phone Number(only numbers)" id="id" required>
       <h2 style="color:green;display: none;text-align: center;" id="Success" >Successfully Submitted!</h2>
-      <input type="hidden" name="program" value="ast" id="program">
+      <input type="hidden" name="program" value="ast" id="program"> <!-- very important, based on the value attribute it tells the Apps Script which form is being accessed and therefore which sheet to POST to-->
       <button type="submit">Send</button>
       <p id="statusMessage"></p>
      
